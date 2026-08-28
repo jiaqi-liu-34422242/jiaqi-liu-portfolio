@@ -149,8 +149,9 @@ footer { display: flex; justify-content: space-between; gap: 24px; padding: 22px
 .sleeve-stage { padding: 90px 0 38px; overflow: hidden; border-bottom: 1px solid var(--black); }
 .sleeve-track { display: flex; gap: 28px; width: max-content; padding: 0 max(24px, calc((100vw - 1320px) / 2)); overflow-x: auto; scroll-snap-type: x mandatory; }
 .record-sleeve, .future-sleeve { position: relative; flex: 0 0 clamp(270px, 31vw, 455px); aspect-ratio: 1; border: 1px solid var(--black); scroll-snap-align: center; overflow: hidden; }
-.record-sleeve { padding: 22px; text-align: left; background: #d8d5cd; color: var(--black); cursor: grab; font: inherit; transition: transform 180ms ease, box-shadow 180ms ease; }
-.record-sleeve:hover, .record-sleeve.is-selected { transform: translateY(-12px) rotate(-.7deg); box-shadow: 14px 16px 0 var(--black); }
+.record-sleeve { padding: 22px; text-align: left; background: #d8d5cd; color: var(--black); cursor: grab; font: inherit; transition: transform 180ms ease, box-shadow 180ms ease; z-index: 1; }
+.record-sleeve:hover { transform: translateY(-12px) rotate(-.7deg); box-shadow: 14px 16px 0 var(--black); }
+.record-sleeve.is-selected { transform: translateY(-12px) rotate(-.7deg) scale(1.08); box-shadow: 14px 16px 0 var(--black); z-index: 2; }
 .record-sleeve:active { cursor: grabbing; }
 .sleeve-index, .sleeve-meta { position: absolute; z-index: 2; font: 9px var(--font-geist-mono), monospace; letter-spacing: .1em; }
 .sleeve-index { top: 20px; left: 22px; }
@@ -226,7 +227,8 @@ footer { display: flex; justify-content: space-between; gap: 24px; padding: 22px
   .sleeve-stage { padding-top: 66px; }
   .sleeve-track { gap: 18px; padding: 0 14vw; }
   .record-sleeve, .future-sleeve { flex-basis: 72vw; }
-  .record-sleeve:hover, .record-sleeve.is-selected { transform: translateY(-7px); box-shadow: 8px 10px 0 var(--black); }
+  .record-sleeve:hover { transform: translateY(-7px); box-shadow: 8px 10px 0 var(--black); }
+  .record-sleeve.is-selected { transform: translateY(-7px) scale(1.05); box-shadow: 8px 10px 0 var(--black); }
   .player-zone { min-height: 900px; grid-template-columns: 1fr; padding: 100px 9vw 80px; gap: 50px; }
   .gramophone { grid-row: 1; }
   .pet-guide { grid-row: 2; width: 38vw; justify-self: start; }
