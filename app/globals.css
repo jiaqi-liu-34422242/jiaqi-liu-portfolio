@@ -50,8 +50,6 @@ button { color: inherit; }
 .index-tag { align-self: start; font: 10px var(--font-geist-mono), monospace; }
 .archive-heading h2 { margin: 0; font-size: clamp(68px, 10.4vw, 184px); line-height: .78; letter-spacing: -.075em; text-transform: uppercase; }
 .archive-heading p { margin: 0; padding-left: 20px; border-left: 1px solid var(--black); font-size: 13px; line-height: 1.55; }
-.archive-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; padding-top: 40px; border-top: 1px solid var(--black); }
-.archive-wall .record-sleeve { display: block; cursor: pointer; text-decoration: none; }
 
 .profile { min-height: 760px; display: grid; grid-template-columns: 74px 1fr 19vw; position: relative; overflow: hidden; background: var(--black); color: var(--bone); }
 .profile-rail { display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: 24px 0; border-right: 1px solid rgba(236,235,230,.35); writing-mode: vertical-rl; font: 9px var(--font-geist-mono), monospace; letter-spacing: .14em; text-transform: uppercase; }
@@ -88,7 +86,6 @@ footer { display: flex; justify-content: space-between; gap: 24px; padding: 22px
   .hero-information { width: 46vw; }
   .archive-heading { grid-template-columns: 60px 1fr; }
   .archive-heading p { grid-column: 2; }
-  .archive-wall { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 18px; }
   .profile { grid-template-columns: 56px 1fr 10vw; }
   .profile-body { grid-template-columns: 1fr; }
   .contact { grid-template-columns: 60px minmax(0, 1fr); grid-template-areas: "code label" ". title" ". aside"; row-gap: 56px; }
@@ -110,7 +107,6 @@ footer { display: flex; justify-content: space-between; gap: 24px; padding: 22px
   .archive-heading { grid-template-columns: 1fr; margin-bottom: 52px; }
   .archive-heading h2, .archive-heading p { grid-column: 1; }
   .archive-heading p { padding: 14px 0 0; border-left: 0; border-top: 1px solid var(--black); }
-  .archive-wall { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .profile { grid-template-columns: 36px 1fr; }
   .profile-block { display: none; }
   .profile-content { padding: 84px 20px 90px; }

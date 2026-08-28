@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { projects } from "./project-data";
+import { RecordWall } from "./record-wall";
 
 const words = {
   en: {
@@ -100,22 +100,9 @@ export default function Home() {
           <h2>{t.archive}</h2>
           <p>{t.archiveNote}</p>
         </div>
-        <div className="archive-wall">
-          {projects.map((project) => (
-            <a
-              className={`record-sleeve ${project.coverClass}`}
-              key={project.slug}
-              href={`/projects/${project.slug}`}
-              aria-label={`Open ${language === "zh" ? project.zhTitle : project.title}`}
-            >
-              <span className="sleeve-index">JQL / {project.number}</span>
-              <span className="sleeve-window"><b>{project.number}</b></span>
-              <span className="sleeve-title">{language === "zh" ? project.zhTitle : project.title}</span>
-              <span className="sleeve-meta">{project.category}<br />{project.period}</span>
-            </a>
-          ))}
-        </div>
       </section>
+
+      <RecordWall language={language} />
 
       <section className="profile" id="profile">
         <div className="profile-rail"><span>[ 04 ]</span><span>{t.profile}</span></div>
