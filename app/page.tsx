@@ -100,13 +100,18 @@ export default function Home() {
           <h2>{t.archive}</h2>
           <p>{t.archiveNote}</p>
         </div>
-        <div className="archive-list">
+        <div className="archive-wall">
           {projects.map((project) => (
-            <a className="archive-entry" key={project.slug} href={`/projects/${project.slug}`}>
-              <span className="entry-id">{project.number}</span>
-              <div className="entry-title"><span>{language === "zh" ? project.zhTitle : project.title}</span><strong>{project.number}</strong></div>
-              <div className="entry-status"><span>{project.category}</span><small>{project.period}</small></div>
-              <span className="entry-arrow">↗</span>
+            <a
+              className={`record-sleeve ${project.coverClass}`}
+              key={project.slug}
+              href={`/projects/${project.slug}`}
+              aria-label={`Open ${language === "zh" ? project.zhTitle : project.title}`}
+            >
+              <span className="sleeve-index">JQL / {project.number}</span>
+              <span className="sleeve-window"><b>{project.number}</b></span>
+              <span className="sleeve-title">{language === "zh" ? project.zhTitle : project.title}</span>
+              <span className="sleeve-meta">{project.category}<br />{project.period}</span>
             </a>
           ))}
         </div>
