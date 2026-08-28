@@ -20,11 +20,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;
   const project = projects.find((item) => item.slug === slug);
 
-  if (!project) return <main className="project-file"><a href="/archive">← ARCHIVE</a><h1>FILE NOT FOUND</h1></main>;
+  if (!project) return <main className="project-file"><a href="/#work">← ARCHIVE</a><h1>FILE NOT FOUND</h1></main>;
 
   return (
     <main className="project-file">
-      <header><a href="/archive">← RECORD ROOM</a><span>JIAQI LIU / {project.number}</span></header>
+      <header><a href="/#work">← ARCHIVE</a><span>JIAQI LIU / {project.number}</span></header>
       <section className="project-file-hero">
         <span>[ CASE STUDY / {project.number} ]</span>
         <h1>{project.title}</h1>

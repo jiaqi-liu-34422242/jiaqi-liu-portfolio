@@ -23,7 +23,6 @@ const words = {
     contact: "Contact / Documents",
     contactTitle: "Continue the conversation.",
     contactBody: "Available for software engineering opportunities, research conversations and project collaborations.",
-    addData: "Awaiting verified link",
   },
   zh: {
     nav: ["档案", "简介", "联系"],
@@ -44,7 +43,6 @@ const words = {
     contact: "联系 / 文件",
     contactTitle: "继续交流。",
     contactBody: "欢迎联系软件工程机会、研究交流与项目合作。",
-    addData: "等待加入已验证链接",
   },
 };
 
@@ -63,7 +61,7 @@ export default function Home() {
         <a className="identity-mark" href="#top"><span>JIAQI</span><b>LIU</b></a>
         <div className="edition">PORTFOLIO — EDITION 01 / 2026</div>
         <nav aria-label="Primary navigation">
-          <a href="/archive">{t.nav[0]}</a>
+          <a href="#work">{t.nav[0]}</a>
           <a href="#profile">{t.nav[1]}</a>
           <a href="#contact">{t.nav[2]}</a>
         </nav>
@@ -89,7 +87,7 @@ export default function Home() {
         <div className="hero-information">
           <div className="hero-meta"><span>{t.discipline}</span><span>{t.base}</span></div>
           <p>{t.intro}</p>
-          <a href="/archive">{t.enter}<span>→</span></a>
+          <a href="#work">{t.enter}<span>→</span></a>
         </div>
         <div className="vertical-caption" aria-hidden="true">SELECTED WORKS — SYSTEMS / SOFTWARE / INTERACTION</div>
       </section>
@@ -127,8 +125,8 @@ export default function Home() {
         <div className="contact-aside">
           <p>{t.contactBody}</p>
           <div className="document-list">
-            <span title="A public-safe résumé will be added after removing private address and phone details">RÉSUMÉ <b>SOON</b></span>
-            <span title={t.addData}>GITHUB <b>SOON</b></span>
+            <a href="/Jiaqi_Liu_Resume.pdf" target="_blank" rel="noreferrer">RÉSUMÉ <b>↗</b></a>
+            <a href="https://github.com/jiaqi-liu-34422242" target="_blank" rel="noreferrer">GITHUB <b>↗</b></a>
             <a href="mailto:1429504052@qq.com">EMAIL <b>↗</b></a>
           </div>
         </div>
